@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Web Portfolio</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				// Add smooth scrolling to all links in navbar + footer link
+				$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+
+					// Prevent default anchor click behavior
+					event.preventDefault();
+
+					// Store hash
+					var hash = this.hash;
+
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 900, function(){
+
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+						});
+					} // End if
+				});
+			})
+		</script>
+		<script type="text/javascript" src="js/script.js"></script>
+  </head>
+  <body>
+		<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+		
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><div class="logo-image"><img height="40px" width="46px" src="img/Me.PNG" class="img-fluid"></div></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home" class="glyphicon glyphicon-home">HOME</a></li>
+						<li><a href="#skills" class="glyphicon glyphicon-book">SKILLS</a></li>
+						<li><a href="#projects" class="glyphicon glyphicon-th-list">PROJECTS</a></li>
+						<li><a href="#contact" class="glyphicon glyphicon-envelope">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div id="home" class="container bg-1">
+			<div class="images">
+				<img src="img/Code.jpg">
+				<img src="img/Me1.png" class="img-circle my-img">
+			</div>
+			<div class="home-content">
+				<p>My name is Jeff Daffern.</p>
+				<h3>I am a Computer Science Major<br>from Utah with an emphasis on<br>Software Development and <br>Web Programming.</h3>
+				<p>I am currently attending SLCC and am on track to graduate in the Spring.</p>
+				<div class="contact-btn"><a href="#contact">Contact Me</a></div>
+			</div>
+		</div>
+		
+		<div id="skills" class="container text-center bg-3">
+			<h1>Skills</h1>
+			<p>I have worked with C#, Java, SQL, HTML, CSS, and Javascript.</p>
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<p class="text-center"><strong>Object-oriented programming</strong></p><br>
+						<img src="img/Java.png" class="img-circle person" alt="Java Programming">
+					<div>
+					  <p>I have worked with Java for 2 years and C# for 1 year.</p>
+					  <p>I am very comfortable with object-oriented languages.</p>
+					  <p>I have used Eclipse, Visual Studio and NetBeans extensively.</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<p class="text-center"><strong>Database</strong></p><br>
+						<img src="img/Database.png" class="img-circle person" alt="Database">
+					<div>
+						<p>I have worked with MySQL for over a year.</p>
+						<p>I am comfortable with relational databases.</p>
+						<p>I have also incorporated SQL <br>into several Java and C# projects<br> I am very familiar with JDBC</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<p class="text-center"><strong>Web Programming</strong></p><br>
+						<img src="img/Web.png" class="img-circle person" alt="Web Programming">
+					<div>
+						<p>I have a solid understanding of</p>
+						<p>HTML, CSS, Javascript, and Bootstrap</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<!-- Projects -->
+		
+		<div id="projects" class="container text-center bg-2">
+			<h1>Software Development Projects</h1>
+			<p>Here are some of the programs I have worked on.</p>
+			<div class="modal-row">
+				<div class="modal-column">
+					<img src="img/MSLoad1.PNG" onclick="openModal();currentSlide(1)" class="hover-shadow">
+				</div>
+				<div class="modal-column">
+					<img src="img/MSLoad2.PNG" onclick="openModal();currentSlide(2)" class="hover-shadow">
+				</div>
+				<div class="modal-column">
+					<img src="img/MovieSelector1.PNG" onclick="openModal();currentSlide(3)" class="hover-shadow">
+				</div>
+				<div class="modal-column">
+					<img src="img/MovieSelector2.PNG" onclick="openModal();currentSlide(4)" class="hover-shadow">
+				</div>
+			</div>
+			
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1 / 8</div>
+						<img src="img/MSLoad1.PNG" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">2 / 8</div>
+						<img src="img/MSLoad2.PNG" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">3 / 8</div>
+						<img src="img/MovieSelector1.PNG" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">4 / 8</div>
+						<img src="img/MovieSelector2.PNG" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<div class="numbertext">5 / 8</div>
+						<img src="img/Mastermind1.PNG" style="width:100%">
+					</div>
+
+<div class="mySlides">
+						<div class="numbertext">6 / 8</div>
+						<img src="img/Mastermind2.PNG" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">7 / 8</div>
+						<img src="img/CF1.PNG" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">8 / 8</div>
+						<img src="img/CF2.PNG" style="width:100%">
+					</div>
+					
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+
+					<!-- Thumbnail image controls -->
+					<div class="thumbnail-column">
+						<img class="demo" src="img/MSLoad1.PNG" onclick="currentSlide(1)" alt="Movie Selector Load Screen">
+					</div>
+
+					<div class="thumbnail-column">
+						<img class="demo" src="img/MSLoad2.PNG" onclick="currentSlide(2)" alt="Movie Selector Load Screen">
+					</div>
+
+					<div class="thumbnail-column">
+						<img class="demo" src="img/MovieSelector1.PNG" onclick="currentSlide(3)" alt="Movie Selector App">
+					</div>
+
+					<div class="thumbnail-column">
+						<img class="demo" src="img/MovieSelector2.PNG" onclick="currentSlide(4)" alt="Movie Selector App">
+					</div>
+					
+					<div class="thumbnail-column">
+						<img class="demo" src="img/Mastermind1.PNG" onclick="currentSlide(5)" alt="Movie Selector Load Screen">
+					</div>
+
+					<div class="thumbnail-column">
+						<img class="demo" src="img/Mastermind2.PNG" onclick="currentSlide(6)" alt="Movie Selector Load Screen">
+					</div>
+
+					<div class="thumbnail-column">
+						<img class="demo" src="img/CF1.PNG" onclick="currentSlide(7)" alt="Movie Selector App">
+					</div>
+
+					<div class="thumbnail-column">
+						<img class="demo" src="img/CF2.PNG" onclick="currentSlide(8)" alt="Movie Selector App">
+					</div>
+				</div>
+			</div>
+	
+			<h1>Web Development Projects</h1>
+			<p>Here is a list of the web pages I have worked on.</p>
+			<div class="projects"><ol class="project-list">				
+				<div class="row">
+					<div class="col-sm-4">
+						<div>
+							<li><a href="http://jgladiator6.freesite.vip/tables/" target="_Blank">Youtube Videos</a></li>
+							<li><a href="http://jgladiator6.freesite.vip/image-map/" target="_Blank">Image Map</a></li>
+							<li><a href="http://jgladiator6.freesite.vip/superheroes/" target="_Blank">Superheroes</a></li>
+							<li><a href="http://jgladiator6.freesite.vip/little-boxes/" target="_Blank">Little Boxes</a></li>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div>
+							<li><a href="http://jgladiator6.freesite.vip/horizontal-menu/" target="_Blank">Horizontal Menu</a></li>
+							<li><a href="http://jgladiator6.freesite.vip/pizza-2/" target="_Blank">Pizza Parlor</a></li>
+							<li><a href="http://jgladiator6.freesite.vip/js-birthday/" target="_Blank">Happy Birthday</a></li>
+							<li><a href="http://jgladiator6.freesite.vip/mad-lib/" target="_Blank">Mad Lib</a></li>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div>
+							<li><a href="http://jgladiator6.freesite.vip/lottery/" target="_Blank">Lottery</a></li>
+							<li><a href="http://jgladiator6.freesite.vip/guess/" target="_Blank">Guessing Game</a></li>
+							<li><a href="http://jgladiator6.freesite.vip/tic-tac-toe/" target="_Blank">Tic Tac Toe</a></li>
+							<li><a href="http://jgladiator6.freesite.vip/bootstrap/" target="_Blank">Bootstrap (Band)</a></li>
+					</div>
+				 </div>
+			</ol></div>
+		</div>
+		
+		<div id="contact" class="container text-center bg-3">
+			<h1>Contact</h1>
+			<p>The best way to contact me is by email. You can reach me here:<br><br>Jeff Daffern<br>Jeffdaffern@yahoo.com<br>801-815-4016</p>
+		</div>
+    
+		<div id="footer" class="container text-center bg-1">
+			<a href="https://slcc.digication.com/jeff-dafferns-eportfolio/csis-1430">My Eportfolio</a>
+			<p>This site is the property of Jeff Daffern</p>
+		</div>
+  </body>
+</html>
+
+<!-- 
+
+-->

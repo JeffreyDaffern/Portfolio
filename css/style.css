@@ -1,0 +1,313 @@
+body{
+	 background: #00134d;
+	margin-top: 50px;
+}
+.container{
+  padding: 80px 120px;
+	width: 100%;
+}
+.person {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
+  opacity: 0.9;
+}
+.person:hover {
+  border-color: #00134d;
+}
+
+.bg-1 {
+  background: #00134d;
+  color: white;
+}
+
+.bg-2 {
+  background: #2d2d30;
+  color: #bdbdbd;
+}
+.bg-3 {
+  background: white;
+	color: black;
+}
+
+img{
+	max-width: 100%;
+}
+
+.modal-row > .modal-column {
+  padding: 0 8px;
+}
+
+.modal-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.modal-column {
+  float: left;
+  width: 25%;
+}
+
+.thumbnail-column
+{
+	float: left;
+	width:12%;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 70%;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.prev{
+	left:0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+	background-color: black;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+	max-width: 40%;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#home img{
+	float: right;
+	width: 26%;
+	height: 26%;
+}
+
+#home a, #footer a{
+	padding: 10px 20px;
+  background-color: gray;
+  color: white;
+  border-radius: 10px;
+}
+#footer p{margin-top:30px; margin-bottom:30px;}
+
+.contact-btn{margin-top: 40px;}
+#home a:hover{border: 1px solid transparent;}
+#home{width: 100%;}
+#home .img-circle{	margin-right: 15%;	width: 17%}
+#home h1{	margin-bottom: 20px;}
+
+.projects{
+	width: 600px;
+	margin: 5px auto;
+	text-align: left;
+	padding-left:40px;
+	margin-top: 20px;
+}
+
+.navbar-right{
+	padding-right: 100px;
+}
+
+/* Add a dark background color with a little bit see-through */
+.navbar {
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand {
+  color: #d5d5d5 !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+  color: #fff !important;
+  background-color:#29292c !important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+  color: #fff ;
+  background-color: #555 !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+  color: #000 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+  background-color: red !important;
+}
+.logo-image{
+	width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    overflow: hidden;
+		margin-top: -10px;
+}
+
+
+
+#footer{
+	padding:10px;
+	padding-top: 20px;
+}
+
+@media (max-width: 1530px) {
+  #home .img-circle{	margin-right: 12%;}
+}
+@media (max-width: 1265px) {
+  #home .img-circle{	margin-right: 5%;	width: 17%}
+}
+@media (max-width: 925px) {
+  #home {	padding-right: 20px; padding-left: 20px;}
+}
+@media (max-width: 869px) {
+  .images {	display: none;}
+	.home-content{text-align: center;}
+}
+@media (max-width: 767px) {
+  .projects{width: 40%; padding-left: 0;}
+}
+
+@media (max-width: 621px) {
+  .projects{width: 48%;}
+}
+@media (max-width: 560px) {
+  .projects{width: 33%;}
+	#projects{padding: 20px;}
+}
+@media (max-width: 498px) {
+  .projects{width: 40%;}
+	#projects{padding: 20px;}
+	h1{font-size: 22px;}
+	h3{font-size: 18px;}
+}
+@media (max-width: 421px) {
+  .projects{width: 51%;}
+	#projects{padding: 20px;}
+	#contact{Padding: 20px;}
+}
+@media (max-width: 342px) {
+  .projects{width: 60%;}
+	#projects{padding: 20px;}
+}
+
+#projects {
+  animation: pulse 5s infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #2d2d30;
+  }
+	50%{
+		background-color: #00134d;
+		}
+  100% {
+    background-color: black;
+  }
+}
